@@ -1,0 +1,23 @@
+<h3>About page</h3><br>
+<p><strong>Name: </strong> {{firstName}}, {{lastName}}</p>
+<p><strong>Email: </strong> {{email}}</p>
+<p><strong>Address: </strong> {{address.street}}, {{address.city}}</p>
+
+<button (click)="toggleEditAbout()">EDIT</button><br><br>
+
+<form *ngIf=isEdit>
+  <div>
+    <label>Name</label><br>
+    <input type="text" [(ngModel)]="firstName" name="firstName">
+    <input type="text" [(ngModel)]="lastName" name="lastName">
+  </div><br>
+  <div>
+    <label>Email</label><br>
+    <input type="text" [(ngModel)]="email" name="email">
+  </div><br>
+  <div>
+    <label>Address</label><br>
+    <input type="text" [(ngModel)]="address.street" name="street">
+    <input type="text" [(ngModel)]="address.city" name="city">
+  </div>
+</form>

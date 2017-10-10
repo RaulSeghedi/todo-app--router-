@@ -1,0 +1,13 @@
+<h3>Todo page</h3>
+
+<div>
+  <input type="text" #todo>
+  <button (click)="addTodo(todo.value)">Submit</button>
+</div>
+
+<ul>
+  <li *ngFor="let todo of todos; let i = index">
+    {{todo}}
+    <a href="#" (click)="deleteTodo(todo)">X</a>
+  </li>
+</ul>
